@@ -16,4 +16,4 @@ PC - Computer Programming
 
 SD - Data Structures
 
-NM - Numerical Methods
+MN - Numerical Methods
