@@ -1,0 +1,13 @@
+Mateescu F. Viorel-Cristian
+Grupa: 312CB
+
+Pentru functia generate_probabilities, am luat o matrice identica ca ce-a din input, in care am setat elementele ca fiind 0. (unde sum(1:rows) este o suma de N elemente, in care adun 1+2+3+..+N). Am observat ca fiecare prim element al matricei este "4", deci primul element din fiecare matrice va fi 4. Daca e primul sau ultimul nod de pe fiecare rand, are cinci vecini, cu exceptia ultimului unde au 4, daca este in mijloc au 6 si respectiv 5. Am parcurs fiecare rand si pentru fiecare rand am pus valori, iar acele valori le-am luat din matricea introdusa. Daca ai un alt numar vecin ii pun indicele -1, iar la respectivul indice pun numarul de drumuri care este invecinat (gen 5 sau 6) si pun 4 la numerele care sunt langa "mancare".
+
+Pentru functia matrix_to_csr, am folosit functia nonzeros, pentru a elimina toate elementele 0 din matricea data ca parametru si introduce elementele intr-un vector "values";
+Colind incepe sa numere fiecare element, de pe fiecare linie a matricei, si incepe sa numere elementele care sunt diferite de 0 (m-am folosit de functia find);
+La rowptr, iau fiecare element din fiecare linie, si in momentul in care gasesc primul element diferit de 0, il caut in values. Ii numar pozitia pe care acest element il are, si il introduc in vectorul rowptr. Asa fac pentru fiecare prim element, din fiecare linie a matricei.
+
+Pentru Jacobi_factorization, am folosit algoritmul de la curs, prin care iau diagonala principala a matricei, o introduc intr-o matrice MxM, si dupa aceea cu funtiile tril si triu, iau elementele strict superioare/inferioare. Cu formulele din curs(G = inv(D) * (superior + inferior)), scot matricea si vectorul de iteratie. Inversa la diagonala o fac cu functia inv().
+
+Pentru Jacobi_sparse, ma folosesc de functia "do/until", iau un vector=0, si un vector de iteratie de marimea lui C si formez un vector x cu elementele 0.
+Apoi apelez functia csr_multiplication, pana cand vectorul initial care aproximeaza solutia, este mai mic strict ca toleranta.

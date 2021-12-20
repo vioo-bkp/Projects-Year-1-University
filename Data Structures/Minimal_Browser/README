@@ -1,0 +1,22 @@
+Mateescu Viorel-Cristian 312CB
+-->utils.c: Am o metoda push_page, unde avem stiva de pagini, unde este simulata o stiva. Daca stiva este goala, atunci primul elem din stiva o sa fie primul, daca nu e goala, il pun deasupra
+La pop_page, eliminam primul element din stiva, adica primul element o sa devina al doilea.
+queueHistory: adaug un istoric in coada, deque imi scoate primul element intrat in coada, adica primul element o sa devina next-ul.
+que download entry: inserez la pozitia care trebuie(ex: intre 3 5 9, introduc 4 intre 3 si 5), la deque este fix la fel, scot primul element
+-->Main.c: Am creat un browser pe care l-am initializat, si functia start care deschide fisierele
+O variabila de tip action, care contine comenzile date ca parametru. In functie de actiune returneaza o anumita valoare.
+Daca primeste new_tab, imi creez un obiect de tip tab, next devine null, si il inserez dupa tab-ul curent.
+tab_aux retine valoarea curenta a unui tab, iau un tab nou, il creez si il pun la sfarsitul tab-urilor.
+Print_open_tabs, iau un tab_aux care este un pointer catre noul tab, si cat timp este diferit de NULL, o afiseaza, daca nu, inseamna ca este empty
+La go_to, ii pasez browserul si URL, iau un tab_aux (tab-ul curent), daca pagina curenta este NULL, atunci Tab_aux o sa devina pagina creata, altfel pagina curenta va fi pusa
+intr-un back, curent_page devine page-ul creat, dupa ce intru pe o pagina o adaug in istoric.
+Add_to_History, in coada de istoric imi adauga noul history note (care contine URL-ul);
+Process_download, daca am niste descarcari intr-un progres de 1 secunda, imi ia size-ul (time-ul si bandwith). Cat timp size-ul != 0 si mai exista descarcari in progress
+ma uit la prima resursa sa vad cat mai am de descarcat din ea.
+Se uita la prima resusrsa din descarcari, o descarca daca poate, altfel, scade din ea cat reuseste sa descarce (in cazul in care sunt mai multe)
+Show_history, avem coada cu descarcari, parcurgem descarcarile si afisam (similar cu print_open_tab);
+go_to_previous, se uita la tab-ul curent, si il pune in coada cu forward, ca sa stie sa ma intoarca inapoi pe tab in cazul in care vreau sa ma intorc inapoi.
+go_to_next, pune pagina curenta in back, iar pagina curenta devine prima din forward. Change tab, modific tab indexul. Clear_History, daca nr de intrari este 0, 
+atunci imi sterge tot(frontul devine null), adica face dequeue
+fill_resources_if_needed, daca pagina curenta este diferita de NULL, si nu exista resurse, atunci folosesc get_page_resurces. Dupa ce face fill cu resursele, le parcurg apoi le afisez.
+Download, am un vector de resurse, si luam a cata resursa ne zice, si o adaugam in coada de reurse.

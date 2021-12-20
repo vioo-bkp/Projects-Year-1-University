@@ -1,0 +1,21 @@
+Nume: Mateescu Viorel-Cristian
+Grupa: 312CB
+
+Algoritmul Iterative:
+Am citi din fisierul de input fiecare element, folosindu-ma de functii basic precum while si for-uri.
+Am creat o matrice de adicenta pentru graf-ul primit (lista de vecini), in care am pus
+1 pe pozitia unei matrici A(i,i), cu conditia ca "j" sa se afle in vecinii lui "i".
+Restul elementelor ramanand 0. Am rezolvat numarul de link-uri detinute de fiecare pagina, facand suma totatala
+de pe fiecare linie din diagonala principala. M-am folosit de while (puteam folosi si un do-while), pentru a
+respecta conditia inpusa in cerinta.
+
+Algoritmul Algebraic:
+In mare parte, inceputul codului, are la baza metoda de la cerinta 1, folosind Algoritmul Iterative (citire si
+calcului matricei de adiacenta). Am introdus 2 functii noi, si anume PR_Inv(functie data de autor, si completata
+de mine, fiind un GramSchmidt modificat) si eq_triunghi (care calculeaza si rezolva un sistem triunghiular superior).
+Cu GramSchmidt, am generat matricile Q(matrice ortogonala) si R(matrice superior triunghiulara).
+
+Functia PageRank:
+Prin aceasta functie, calculez un vector folosindu-ma de ce-i doi algoritmi (Iterative si Algebraic).
+Folosesc o metoda de sort, prin "descend", prin care, pe langa vectorul sortat descendent returnez si un vector,
+(vector J, cerut de catre enunt) care retine index-ul fiecarui element inainte de operatia de sortare.
