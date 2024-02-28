@@ -14,7 +14,7 @@ This repository contains the projects, courses, and homework assignments from th
 ## Courses
 
 ### Computer Programming (PC)
-- [PC](https://ocw.cs.pub.ro/courses/programare)
+- [Reference PC](https://ocw.cs.pub.ro/courses/programare)
 - Introduction to programming in C, with a focus on understanding the basic concepts of programming and the C language;
 - This course had 3 homework assignments in the following topics:
   - IPv4_Address: Introduction to C programming binary operations
